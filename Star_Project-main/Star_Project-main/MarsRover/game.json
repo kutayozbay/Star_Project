@@ -2772,7 +2772,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.17
+        "zoomFactor": 0.20333333129882808
       },
       "objectsGroups": [
         {
@@ -9061,7 +9061,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Hareket",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9550,7 +9550,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Yakıt",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9987,7 +9987,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Yakıt Bitince",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10147,7 +10147,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Pause Menu",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10402,7 +10402,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -11111,7 +11111,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Timer",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11368,6 +11368,21 @@
                     "Puan",
                     "+",
                     "Variable(finishedGame)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"http://starproject.stratek.com.tr/HighScoresToUpdate2.php\"",
+                    "\"&Username=\"+GlobalVariableString(Username)+\"&Puan=\"+ GlobalVariableString(Puan)+\"&finishedgame= \"+GlobalVariableString(finishedGame)",
+                    "\"POST\"",
+                    "",
+                    "",
+                    ""
                   ],
                   "subInstructions": []
                 },
